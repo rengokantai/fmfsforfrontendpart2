@@ -35,3 +35,10 @@ forever start app.js
 ```
 
 ### Nginx Setup: Adding a domain name and opening port 443
+```
+server_name rengokantai.com yidi.me;
+```
+allow 443
+```
+ufw allow 443
+```
