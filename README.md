@@ -80,4 +80,20 @@ use_temp_path=off
 proxy_cache_key "$request_uri"
 ```
 
+## Containers and more
+Dedicated server
+- shared resources
+- no os
+- fast deployment
+
+
+## Database
+### Database Types
+### Database Best Practices
+tips
+- Back up your database
+- Use a strong password
+- Dont expose the database outside the network
+- Sanitize your SQL
+- back up your database
 
