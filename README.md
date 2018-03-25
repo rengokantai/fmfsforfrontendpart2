@@ -80,6 +80,31 @@ use_temp_path=off
 proxy_cache_key "$request_uri"
 ```
 
+### Websockets: Setup
+```
+location / {
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Connection "upgrade";
+  proxy_pass http://127.0.0.1:3001;
+}
+```
+
+### http/2
+```
+listen 443 http2 ssl;
+```
+
+### http/2: Exercise
+
+
+
+### Redirect
+```
+location /help {
+  return 301 https://new link;
+}
+```
+
 ## Containers and more
 Dedicated server
 - shared resources
