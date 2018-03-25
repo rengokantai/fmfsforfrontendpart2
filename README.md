@@ -42,3 +42,27 @@ allow 443
 ```
 ufw allow 443
 ```
+
+
+### Installing HTTPS certificate
+```
+add-apt-repository ppa:certbot/certbot
+apt update
+apt install python-certbot-nginx
+```
+
+then
+```
+certbot --nginx
+certbot renew --dry-run
+```
+
+## Nginx Tuning
+### Nginx Tuning: Overview and Gzip
+### Expires headers
+```
+location /static/ {
+  expires 30d;
+  proxy_pass http://
+}
+```
