@@ -60,9 +60,24 @@ certbot renew --dry-run
 ## Nginx Tuning
 ### Nginx Tuning: Overview and Gzip
 ### Expires headers
+
+```
+# /var/etc/nginx/nginx.conf
+gzip on;
+```
 ```
 location /static/ {
   expires 30d;
   proxy_pass http://
 }
 ```
+
+### Caching
+```
+proxy_cache_path /tmp/nginx levels=1:2
+keys_zone=slowfile_cache:10m inactive=60m
+use_temp_path=off
+proxy_cache_key "$request_uri"
+```
+
+
